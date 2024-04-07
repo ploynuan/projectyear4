@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+   text-decoration: none;
+   list-style: none;
+   scroll-behavior:smooth;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: #331767;
+    height: 100vh;
+ }
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    height: 100vh;
+    margin: auto;
+}
+.circle {
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    background-color: #6489df;
+    position: fixed;
+    left: -80px;
+    top: -50px;
+    filter: blur(200px);
+    
+}
+.circle2 {
+    box-sizing: border-box;
+    width: 500px;
+    height: 250px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    background-color: #130a52;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    filter: blur(200px);
+    overflow: hidden;
+  }
+
+.box{
+    position: absolute;
+    height: 350px;
+    max-width: 700px;
+    width: 100%;
+    border-radius: 20px;
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    box-shadow: inset 0 30px 30px -10px rgba(255, 255, 255, 0.8); 
+}
+.bluebox{
+    width: 50%;
+    background:  linear-gradient(135deg,#1a418a,#9a43cd);
+    border-radius: 20px; 
+}
+.logo{
+    width: 100%; 
+    height: 300px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    color: #ffffff;
+}
+.bluebox .logo i {
+    font-size: 100px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.whitebox{
+    width: 50%; 
+    height: 300px;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.whitebox h1{
+    display: none;
+}
+.whitebox .fa-map-location-dot{
+    display: none;
+}
+.login-form{
+    border: 1px solid #3f239a;
+    position: relative;
+    height: 40px;
+    width: 280px;
+    background-color: rgb(252, 252, 252);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    align-items: center;
+}
+#logo-input{
+    margin: 8px 20px;
+    font-size: 23px;
+    color: #2c186f;
+    padding-right: 15px;
+    border-right: 2px solid #53636e;
+}
+.login-form input{
+    border: 0;
+    outline: 0;
+    color: #555;
+    font-size: 14px;
+    width: 60%;
+}
+
+.error{
+    text-align: center;
+    color: red;
+    font-size: 12px;
+} 
+.btn-submit{
+    margin-bottom: 7px;
+    width: 280px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color:#794cbc;
+    color: #fff;
+    background-size: 200%;
+    font-size: 15px;
+    cursor: pointer;
+} 
+@media (max-width: 767px) {
+    
+    .box{
+        height: 400px;
+        max-width: 350px;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+    }
+    .whitebox{
+        width: 90%;
+        height: 350PX;
+        margin: 25PX auto;
+    }
+    .bluebox{
+        height: 0px;
+    }
+    .bluebox .logo h1{
+        display: none;
+    }
+    .bluebox .logo img {
+       display: none;
+    }
+   
+    .whitebox .fa-map-location-dot{
+        display: block;
+        font-size: 100px;
+        color: #3f239a;
+        margin-bottom: 15px;
+    }
+    .whitebox h1{
+        display: block;
+        color: #3f239a;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    
+    .login-form{
+        margin: 0 auto;
+        margin-bottom: 10px;
+        max-width: 250px;
+        width: 65vw;
+        height: 35px;
+    }
+    #logo-input{
+        padding-right: 10px;
+        font-size: clamp(16px,5vw,18px); 
+    }
+    .login-form input{
+        font-size: clamp(10px,5vw,14px); 
+    }
+    .btn-submit{
+        height: 35px;
+        max-width: 250px;
+        width: 65vw;
+        
+    }
+}
+/* }
+@media (max-height:540px){
+    .circle {
+        width: 400px;
+        height: 200px;
+        border-bottom-left-radius: 400px;
+        border-bottom-right-radius: 400px;
+    }
+    .circle2{
+        width: 400px;
+        height: 200px;
+        border-top-left-radius: 400px;
+        border-top-right-radius: 400px;
+    }
+    .box{
+        height: 70vh;
+    }
+    .bluebox{
+        height: 70vh;
+    }
+    .bluebox .logo h1{
+        font-size: clamp(14px,4vh,18px); 
+    }
+    .whitebox{
+        height: 70vh;
+    }
+    #logo-input{
+        font-size: clamp(16px,5vh,18px); 
+    }
+    .input{
+        font-size: clamp(12px,5vh,15px); 
+    }
+    .btn-submit{
+        font-size: clamp(12px,5vh,15px); 
+    }
+} */
