@@ -459,6 +459,7 @@ body{
         cursor: pointer; 
     }
     .value{
+        position: relative;
         text-align: center;
         width: 90%;
         height: 25px;
